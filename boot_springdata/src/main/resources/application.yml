@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.1.102:1522:testDB0113
+    username: demo_01
+    password: demo1007
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+#    用阿里的druid 数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    initialSize: 5
+    maxactive: 20
+    maxWait: 60000
+    minIdle: 5
+    timeBetweenEvictionRunsMillis: 3000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1 from dual
+    testWhileIdle : true
+    testOnBorrow : false
+    testOnReturn : false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+  jpa:
+    hibernate:
+#    更新或者创建数据表
+      ddl-auto: update
+    show-sql: true
