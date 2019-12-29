@@ -24,7 +24,7 @@ public class DruidConfig {
     @Bean
     public DataSource durid() {
 
-        return new DruidDataSource();
+        return new ;
     }
 
     // 配置Druid 的监控
